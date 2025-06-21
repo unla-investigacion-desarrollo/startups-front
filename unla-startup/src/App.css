@@ -49,7 +49,24 @@ button {
   cursor: pointer;
 }
 
+/* ... tus estilos existentes ... */
 
+.logout-button {
+  background: none;
+  border: none;
+  color: white;
+  text-decoration: none;
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  color: rgb(77, 137, 177);
+}
 
 
 
