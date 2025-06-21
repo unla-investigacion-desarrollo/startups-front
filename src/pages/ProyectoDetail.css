@@ -1,0 +1,246 @@
+.proyecto-detail-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.proyecto-header {
+  background-color: #f8fbff;
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-left: 5px solid #4cc9f0;
+}
+
+.proyecto-header.ganador {
+  background-color: #fffcf0;
+  border-left-color: #ffd700;
+}
+
+.ganador-badge {
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  background-color: #ffd700;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.title-section {
+  margin-bottom: 1.5rem;
+}
+
+.proyecto-header h1 {
+  color: #1a1a2e;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  padding-right: 150px;
+}
+
+.creation-date {
+  color: #777;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.autor {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.actions-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn-editar {
+  background-color: #4cc9f0;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.btn-editar:hover {
+  background-color: #3bb6db;
+}
+
+.btn-eliminar {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-eliminar:hover {
+  background-color: #d32f2f;
+}
+
+.btn-marcar-ganador, .btn-remover-ganador {
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-marcar-ganador {
+  background-color: #ffd700;
+  color: #333;
+}
+
+.btn-marcar-ganador:hover {
+  background-color: #e8c500;
+}
+
+.btn-remover-ganador {
+  background-color: #f5f5f5;
+  color: #555;
+}
+
+.btn-remover-ganador:hover {
+  background-color: #e0e0e0;
+}
+
+.proyecto-content {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.descripcion, .contacto-info, .convocatoria-info {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.descripcion h2, .contacto-info h2, .convocatoria-info h2 {
+  color: #1a1a2e;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.descripcion p {
+  color: #444;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+.contacto-item {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.contacto-item:last-child {
+  border-bottom: none;
+}
+
+.contacto-item strong {
+  color: #333;
+  min-width: 100px;
+  display: inline-block;
+}
+
+.convocatoria-card {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.convocatoria-card h3 {
+  color: #1a1a2e;
+  margin-bottom: 1rem;
+}
+
+.convocatoria-card p {
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.btn-ver {
+  background-color: transparent;
+  color: #4cc9f0;
+  border: 1px solid #4cc9f0;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s;
+  display: inline-block;
+}
+
+.btn-ver:hover {
+  background-color: #4cc9f0;
+  color: white;
+}
+
+.back-navigation {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.btn-back {
+  display: inline-block;
+  background-color: transparent;
+  color: #666;
+  border: 1px solid #ddd;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.btn-back:hover {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+  color: #666;
+  font-size: 1.2rem;
+}
+
+.error-container {
+  text-align: center;
+  padding: 2rem;
+  background-color: #fff3f3;
+  color: #d32f2f;
+  border-radius: 8px;
+  margin: 2rem auto;
+  max-width: 600px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 768px) {
+  .proyecto-header h1 {
+    padding-right: 0;
+    margin-top: 1.5rem;
+  }
+  
+  .ganador-badge {
+    position: static;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+}

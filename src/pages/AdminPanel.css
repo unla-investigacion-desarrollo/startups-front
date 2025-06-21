@@ -1,0 +1,136 @@
+.admin-panel-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.admin-panel-container h1 {
+  color: #1a1a2e;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.admin-section {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.admin-section h2 {
+  color: #1a1a2e;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.8rem;
+}
+
+.users-table-container {
+  overflow-x: auto;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.users-table th {
+  background-color: #f8f9fa;
+  color: #333;
+  text-align: left;
+  padding: 1rem;
+  font-weight: 600;
+}
+
+.users-table td {
+  padding: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.users-table tr:hover {
+  background-color: #f8f9fa;
+}
+
+.role-badge {
+  display: inline-block;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.role-badge.final {
+  background-color: #e3f2fd;
+  color: #0d47a1;
+}
+
+.role-badge.staff {
+  background-color: #e8f5e9;
+  color: #1b5e20;
+}
+
+.role-badge.admin {
+  background-color: #fce4ec;
+  color: #880e4f;
+}
+
+.role-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.role-select {
+  padding: 0.4rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.btn-change-role {
+  background-color: #4cc9f0;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 0.9rem;
+}
+
+.btn-change-role:hover {
+  background-color: #3bb6db;
+}
+
+.no-data {
+  text-align: center;
+  color: #777;
+  font-style: italic;
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+  color: #666;
+  font-size: 1.2rem;
+}
+
+.error-message {
+  background-color: #ffe9e9;
+  color: #d80000;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.success-message {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
