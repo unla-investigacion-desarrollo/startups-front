@@ -78,12 +78,12 @@ function Me() {
   }
 
   return (
-    <div className="main-content">
+    <div className="perfil">
       <h1>Mi Perfil</h1>
       
       <div className="profile-card">
         <div className="profile-header">
-          <h2>Nombre de usuario:{nombre}</h2>
+          <h2>Nombre de usuario: {nombre}</h2>
           <span className={`role-badge role-${rol.toLowerCase()}`}>{rol}</span>
         </div>
         

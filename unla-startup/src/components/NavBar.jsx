@@ -55,6 +55,7 @@ function NavBar() {
 
   return (
     <nav className="sidebar">
+      
       <Link to="/"><Home size={24} /><span>INICIO</span></Link>
       <Link to="/proyectos"><Plus size={24} /><span>PROYECTO</span></Link>
       
@@ -72,6 +73,8 @@ function NavBar() {
           </button>
         </>
       )}
+
+      
     </nav>
   );
 }
