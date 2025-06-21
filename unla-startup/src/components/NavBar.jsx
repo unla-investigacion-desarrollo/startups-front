@@ -62,7 +62,7 @@ function NavBar() {
         <Link to="/login"><LogIn size={24} /><span>LOGIN</span></Link>
       ) : (
         <>
-          <Link to="/">
+          <Link to="/me">
             <User size={24} />
             <span>Hola {user.nombre ? user.nombre.split(' ')[0] : 'Usuario'}</span>
           </Link>
