@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/NavBar'; 
-import Login from './pages/Login'; // Agregado - necesitas importar el componente Login
+import Login from './pages/Login'; 
 
 import "./App.css";
 

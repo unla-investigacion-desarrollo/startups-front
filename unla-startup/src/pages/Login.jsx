@@ -20,8 +20,15 @@ function Login() {
       });
 
       if (response.ok) {
-        const userData = await response.json();
-        localStorage.setItem('user', JSON.stringify(userData));
+        const data = await response.json();
+        console.log("Respuesta completa:", data);
+        
+        // Guardar el objeto user en localStorage
+        localStorage.setItem('user', JSON.stringify(data.user));
+        
+        // Disparar un evento personalizado para notificar el cambio
+        window.dispatchEvent(new Event('userLogin'));
+        
         navigate('/');
       } else {
         alert('Credenciales inválidas');

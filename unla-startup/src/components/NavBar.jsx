@@ -6,17 +6,39 @@ function NavBar() {
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
   
-  useEffect(() => {
-    // Comprobar si hay un usuario en localStorage al montar el componente
+  // Función para actualizar el estado del usuario desde localStorage
+  const updateUserFromStorage = () => {
     const storedUser = localStorage.getItem('user');
     if (storedUser) {
-      setUser(JSON.parse(storedUser));
+      try {
+        setUser(JSON.parse(storedUser));
+      } catch (e) {
+        console.error("Error al parsear usuario:", e);
+      }
+    } else {
+      setUser(null);
     }
+  };
+  
+  useEffect(() => {
+    // Cargar usuario al montar el componente
+    updateUserFromStorage();
+    
+    // Escuchar cambios en localStorage (desde otras pestañas)
+    window.addEventListener('storage', updateUserFromStorage);
+    
+    // Escuchar el evento de login personalizado (desde la misma pestaña)
+    window.addEventListener('userLogin', updateUserFromStorage);
+    
+    // Cleanup al desmontar
+    return () => {
+      window.removeEventListener('storage', updateUserFromStorage);
+      window.removeEventListener('userLogin', updateUserFromStorage);
+    };
   }, []);
 
   const handleLogout = async () => {
     try {
-      // Actualizamos el endpoint según tu test.http
       await fetch('http://localhost:3000/api/auth/logout', {
         method: 'POST',
         credentials: 'include'
@@ -29,10 +51,12 @@ function NavBar() {
     }
   };
 
+  console.log("Estado actual del usuario:", user);
+
   return (
     <nav className="sidebar">
       <Link to="/"><Home size={24} /><span>INICIO</span></Link>
-      <Link to="/"><Plus size={24} /><span>PROYECTO</span></Link>
+      <Link to="/proyectos"><Plus size={24} /><span>PROYECTO</span></Link>
       
       {!user ? (
         <Link to="/login"><LogIn size={24} /><span>LOGIN</span></Link>
